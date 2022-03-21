@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Weather Board</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- favicons -->
+        <link rel="apple-touch-icon" sizes="180x180" href="/files/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/files/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/files/favicon-16x16.png">
+        <link rel="manifest" href="/files/site.webmanifest">
+        <link rel="mask-icon" href="/files/safari-pinned-tab.svg" color="#3a384e">
+        <link rel="shortcut icon" href="/files/favicon.ico">
+        <meta name="apple-mobile-web-app-title" content="Weather Board">
+        <meta name="application-name" content="Weather Board">
+        <meta name="msapplication-TileColor" content="#00aba9">
+        <meta name="msapplication-config" content="/files/browserconfig.xml">
+        <meta name="theme-color" content="#23262c">
+
+        <style>
+            html, body {
+                margin: 0;
+                overflow: hidden;
+                height: 100%;
+            }
+        </style>
+    </head>
+    <body>
+        <script type="module">
+        
+            import WeatherBoard from './client/weather-board.js'
+            import aboutText from './website/about-text.js'
+            import manualText from './website/manual-text.js'
+            import loginText from './website/login-text.js'
+            WeatherBoard.loginText = loginText
+            WeatherBoard.aboutText = aboutText
+            WeatherBoard.manualText = manualText
+            document.body.append(WeatherBoard.create())
+        </script>
+    </body>
+</html>

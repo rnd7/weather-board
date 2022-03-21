@@ -1,0 +1,384 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="800.00024"
+   height="1576.0001"
+   viewBox="0 0 211.66673 416.98337"
+   version="1.1"
+   id="svg8"
+   sodipodi:docname="layout.svg"
+   inkscape:version="1.0.1 (c497b03c, 2020-09-10)">
+  <defs
+     id="defs2" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="1"
+     inkscape:cx="522.03901"
+     inkscape:cy="768.4069"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     inkscape:document-rotation="0"
+     showgrid="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     units="px"
+     inkscape:window-width="1680"
+     inkscape:window-height="1005"
+     inkscape:window-x="464"
+     inkscape:window-y="1463"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Ebene 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-30.172928,40.971928)">
+    <rect
+       style="fill:#030303;fill-opacity:1;stroke-width:0.363876;paint-order:fill markers stroke;stop-color:#000000"
+       id="rect924-9"
+       width="211.66667"
+       height="158.75"
+       x="30.172958"
+       y="35.228069" />
+    <rect
+       style="fill:#23262c;fill-opacity:1;stroke-width:0.10292;paint-order:fill markers stroke;stop-color:#000000"
+       id="rect924"
+       width="211.66667"
+       height="12.7"
+       x="30.172989"
+       y="22.528057" />
+    <rect
+       style="fill:#3a384e;fill-opacity:1;stroke-width:0.158382;paint-order:fill markers stroke;stop-color:#000000"
+       id="rect926-0"
+       width="45.764446"
+       height="12.7"
+       x="30.172989"
+       y="22.528057" />
+    <rect
+       style="fill:#ededed;fill-opacity:1;stroke-width:0.10476;paint-order:fill markers stroke;stop-color:#000000"
+       id="rect926"
+       width="20.021952"
+       height="12.7"
+       x="221.8177"
+       y="22.528057" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:4.7625px;line-height:1.25;font-family:monospace;-inkscape-font-specification:'monospace Bold';fill:#23262c;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="226.18329"
+       y="30.586405"
+       id="text945"><tspan
+         sodipodi:role="line"
+         id="tspan943"
+         x="226.18329"
+         y="30.586405"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:4.7625px;font-family:Menlo;-inkscape-font-specification:'Menlo Bold';fill:#23262c;fill-opacity:1;stroke-width:0.264583">Menu</tspan></text>
+    <rect
+       style="fill:#121214;fill-opacity:1;stroke-width:0.10476;paint-order:fill markers stroke;stop-color:#000000"
+       id="rect926-06"
+       width="20.021952"
+       height="12.7"
+       x="75.937439"
+       y="22.528057" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:3.175px;line-height:1.25;font-family:monospace;-inkscape-font-specification:'monospace Bold';fill:#dbdbdb;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="79.078629"
+       y="27.983866"
+       id="text945-5"><tspan
+         sodipodi:role="line"
+         x="79.078629"
+         y="27.983866"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:3.175px;font-family:Menlo;-inkscape-font-specification:'Menlo Bold';fill:#dbdbdb;fill-opacity:1;stroke-width:0.264583"
+         id="tspan992">x: 123</tspan><tspan
+         sodipodi:role="line"
+         x="79.078629"
+         y="32.007515"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:3.175px;font-family:Menlo;-inkscape-font-specification:'Menlo Bold';fill:#dbdbdb;fill-opacity:1;stroke-width:0.264583"
+         id="tspan996">y: -544</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:4.7625px;line-height:1.25;font-family:monospace;-inkscape-font-specification:'monospace Bold';fill:#dbdbdb;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="34.654373"
+       y="30.904247"
+       id="text945-9"><tspan
+         sodipodi:role="line"
+         id="tspan943-1"
+         x="34.654373"
+         y="30.904247"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:4.7625px;font-family:Menlo;-inkscape-font-specification:'Menlo Bold';fill:#dbdbdb;fill-opacity:1;stroke-width:0.264583">Weather Board</tspan></text>
+    <rect
+       style="fill:#a50505;fill-opacity:1;stroke-width:0.0301792;paint-order:fill markers stroke;stop-color:#000000"
+       id="rect926-4"
+       width="3.5476878"
+       height="5.9482522"
+       x="134.46431"
+       y="55.44997" />
+    <rect
+       style="fill:#030303;fill-opacity:1;stroke-width:0.363876;paint-order:fill markers stroke;stop-color:#000000"
+       id="rect924-9-0"
+       width="211.66667"
+       height="158.75"
+       x="30.172928"
+       y="217.26143" />
+    <rect
+       style="fill:#23262c;fill-opacity:1;stroke-width:0.10292;paint-order:fill markers stroke;stop-color:#000000"
+       id="rect924-6"
+       width="211.66667"
+       height="12.7"
+       x="30.172958"
+       y="204.56142" />
+    <rect
+       style="fill:#3a384e;fill-opacity:1;stroke-width:0.158382;paint-order:fill markers stroke;stop-color:#000000"
+       id="rect926-0-0"
+       width="45.764446"
+       height="12.7"
+       x="30.172958"
+       y="204.56142" />
+    <rect
+       style="fill:#3a384e;fill-opacity:1;stroke-width:0.10476;paint-order:fill markers stroke;stop-color:#000000"
+       id="rect926-40"
+       width="20.021952"
+       height="12.7"
+       x="221.81769"
+       y="204.56142" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:4.7625px;line-height:1.25;font-family:monospace;-inkscape-font-specification:'monospace Bold';fill:#dddddd;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="226.18326"
+       y="212.61977"
+       id="text945-56"><tspan
+         sodipodi:role="line"
+         id="tspan943-8"
+         x="226.18326"
+         y="212.61977"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:4.7625px;font-family:Menlo;-inkscape-font-specification:'Menlo Bold';fill:#dddddd;fill-opacity:1;stroke-width:0.264583">Menu</tspan></text>
+    <rect
+       style="fill:#121214;fill-opacity:1;stroke-width:0.10476;paint-order:fill markers stroke;stop-color:#000000"
+       id="rect926-06-5"
+       width="20.021952"
+       height="12.7"
+       x="75.937424"
+       y="204.56142" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:3.175px;line-height:1.25;font-family:monospace;-inkscape-font-specification:'monospace Bold';fill:#dbdbdb;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="79.078613"
+       y="210.01723"
+       id="text945-5-3"><tspan
+         sodipodi:role="line"
+         x="79.078613"
+         y="210.01723"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:3.175px;font-family:Menlo;-inkscape-font-specification:'Menlo Bold';fill:#dbdbdb;fill-opacity:1;stroke-width:0.264583"
+         id="tspan992-7">x: 123</tspan><tspan
+         sodipodi:role="line"
+         x="79.078613"
+         y="214.04088"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:3.175px;font-family:Menlo;-inkscape-font-specification:'Menlo Bold';fill:#dbdbdb;fill-opacity:1;stroke-width:0.264583"
+         id="tspan996-6">y: -544</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:4.7625px;line-height:1.25;font-family:monospace;-inkscape-font-specification:'monospace Bold';fill:#dbdbdb;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="34.654343"
+       y="212.93761"
+       id="text945-9-8"><tspan
+         sodipodi:role="line"
+         id="tspan943-1-6"
+         x="34.654343"
+         y="212.93761"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:4.7625px;font-family:Menlo;-inkscape-font-specification:'Menlo Bold';fill:#dbdbdb;fill-opacity:1;stroke-width:0.264583">Weather Board</tspan></text>
+    <rect
+       style="fill:#a50505;fill-opacity:1;stroke-width:0.0301792;paint-order:fill markers stroke;stop-color:#000000"
+       id="rect926-4-7"
+       width="3.5476878"
+       height="5.9482522"
+       x="134.46429"
+       y="237.48331" />
+    <rect
+       style="fill:#ededed;fill-opacity:1;stroke-width:0.118981;paint-order:fill markers stroke;stop-color:#000000"
+       id="rect926-8-1"
+       width="25.826748"
+       height="12.7"
+       x="216.01286"
+       y="217.26143" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:4.7625px;line-height:1.25;font-family:monospace;-inkscape-font-specification:'monospace Bold';fill:#23262c;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="218.95723"
+       y="225.31976"
+       id="text945-4-8"><tspan
+         sodipodi:role="line"
+         id="tspan943-0-4"
+         x="218.95723"
+         y="225.31976"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:4.7625px;font-family:Menlo;-inkscape-font-specification:'Menlo Bold';fill:#23262c;fill-opacity:1;stroke-width:0.264583">Default</tspan></text>
+    <rect
+       style="fill:#3a384e;fill-opacity:1;stroke-width:0.120267;paint-order:fill markers stroke;stop-color:#000000"
+       id="rect926-8-0-9"
+       width="26.387972"
+       height="12.7"
+       x="165.89879"
+       y="217.26143" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:4.7625px;line-height:1.25;font-family:monospace;-inkscape-font-specification:'monospace Bold';fill:#dbdbdb;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="170.95187"
+       y="225.35358"
+       id="text945-4-5-7"><tspan
+         sodipodi:role="line"
+         id="tspan943-0-8-3"
+         x="170.95187"
+         y="225.35358"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:4.7625px;font-family:Menlo;-inkscape-font-specification:'Menlo Bold';fill:#dbdbdb;fill-opacity:1;stroke-width:0.264583">Active</tspan></text>
+    <rect
+       style="fill:#ccd02c;fill-opacity:1;stroke-width:0.249923;paint-order:fill markers stroke;stop-color:#000000"
+       id="rect1184"
+       width="66.524918"
+       height="31.414888"
+       x="108.27898"
+       y="92.668793" />
+    <rect
+       style="fill:#3a384e;fill-opacity:1;stroke-width:0.275024;paint-order:fill markers stroke;stop-color:#000000"
+       id="rect1186"
+       width="26.458334"
+       height="26.458334"
+       x="30.172989"
+       y="-40.971954" />
+    <rect
+       style="fill:#121214;fill-opacity:1;stroke-width:0.275024;paint-order:fill markers stroke;stop-color:#000000"
+       id="rect1186-3"
+       width="26.458334"
+       height="26.458334"
+       x="56.631317"
+       y="-40.971954" />
+    <rect
+       style="fill:#23262c;fill-opacity:1;stroke-width:0.275024;paint-order:fill markers stroke;stop-color:#000000"
+       id="rect1186-3-3"
+       width="26.458334"
+       height="26.458334"
+       x="83.089645"
+       y="-40.971954" />
+    <rect
+       style="fill:#ededed;fill-opacity:1;stroke-width:0.275024;paint-order:fill markers stroke;stop-color:#000000"
+       id="rect1186-3-3-3"
+       width="26.458334"
+       height="26.458334"
+       x="109.54797"
+       y="-40.971954" />
+    <rect
+       style="fill:#dbdbdb;fill-opacity:1;stroke-width:0.275024;paint-order:fill markers stroke;stop-color:#000000"
+       id="rect1186-3-3-3-8"
+       width="26.458334"
+       height="26.458334"
+       x="136.0063"
+       y="-40.971954" />
+    <rect
+       style="fill:#dbdbdb;fill-opacity:1;stroke-width:0.11404;paint-order:fill markers stroke;stop-color:#000000"
+       id="rect926-8-1-5"
+       width="23.726097"
+       height="12.7"
+       x="192.28676"
+       y="217.26143" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:4.7625px;line-height:1.25;font-family:monospace;-inkscape-font-specification:'monospace Bold';fill:#3a384e;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="197.3638"
+       y="225.31976"
+       id="text945-4-8-8"><tspan
+         sodipodi:role="line"
+         id="tspan943-0-4-9"
+         x="197.3638"
+         y="225.31976"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:4.7625px;font-family:Menlo;-inkscape-font-specification:'Menlo Bold';fill:#3a384e;fill-opacity:1;stroke-width:0.264583">Hover</tspan></text>
+    <rect
+       style="fill:#a50505;fill-opacity:1;stroke-width:0.275024;paint-order:fill markers stroke;stop-color:#000000"
+       id="rect1186-3-3-3-8-3"
+       width="26.458334"
+       height="26.458334"
+       x="162.46463"
+       y="-14.513607" />
+    <rect
+       style="fill:#ffffff;fill-opacity:1;stroke-width:0.275024;paint-order:fill markers stroke;stop-color:#000000"
+       id="rect1186-3-3-3-8-3-0"
+       width="26.458334"
+       height="26.458334"
+       x="188.92296"
+       y="-14.513607" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:4.7625px;line-height:1.25;font-family:monospace;-inkscape-font-specification:'monospace Bold';fill:#030303;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="110.52882"
+       y="98.710045"
+       id="text945-52"><tspan
+         sodipodi:role="line"
+         id="tspan943-3"
+         x="110.52882"
+         y="98.710045"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:4.7625px;font-family:Menlo;-inkscape-font-specification:'Menlo Bold';fill:#030303;fill-opacity:1;stroke-width:0.264583">Menu</tspan></text>
+    <rect
+       style="fill:#030303;fill-opacity:1;stroke-width:0.275024;paint-order:fill markers stroke;stop-color:#000000"
+       id="rect1186-8"
+       width="26.458334"
+       height="26.458334"
+       x="30.172989"
+       y="-14.513607" />
+    <rect
+       style="fill:#777777;fill-opacity:1;stroke-width:0.0301792;paint-order:fill markers stroke;stop-color:#000000"
+       id="rect926-4-8"
+       width="3.5476878"
+       height="5.9482522"
+       x="130.91663"
+       y="55.44997" />
+    <rect
+       style="fill:#777777;fill-opacity:1;stroke-width:0.275024;paint-order:fill markers stroke;stop-color:#000000;stroke:none"
+       id="rect1186-3-3-3-8-7"
+       width="26.458334"
+       height="26.458334"
+       x="162.46463"
+       y="-40.971954" />
+    <rect
+       style="fill:#181821;fill-opacity:1;stroke-width:0.340618;paint-order:fill markers stroke;stop-color:#000000"
+       id="rect926-0-9"
+       width="211.66666"
+       height="12.7"
+       x="30.172989"
+       y="35.228058" />
+    <rect
+       style="fill:#181821;fill-opacity:1;stroke-width:0.275024;paint-order:fill markers stroke;stop-color:#000000"
+       id="rect1186-8-5"
+       width="26.458334"
+       height="26.458334"
+       x="56.631325"
+       y="-14.513607" />
+    <rect
+       style="fill:#ccd02c;fill-opacity:1;stroke-width:0.275024;paint-order:fill markers stroke;stop-color:#000000"
+       id="rect1186-3-3-3-8-3-2"
+       width="26.458334"
+       height="26.458334"
+       x="188.92296"
+       y="-14.513607" />
+  </g>
+</svg>
