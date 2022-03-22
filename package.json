@@ -6,9 +6,11 @@
   "author": "rnd7 <rnd7@riseup.net> (https://github.com/rnd7)",
   "main": "./src/server-module.js",
   "browser": "./src/browser-module.js",
+  "bin": "./bin/weather-board.js",
   "files": [
     "config",
     "scripts",
+    "bin",
     "src/**"
   ],
   "sideEffects": false,
