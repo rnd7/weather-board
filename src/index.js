@@ -10,6 +10,8 @@ const __pkgroot = resolve(__dirname, '..')
 console.log('Weather Board startup procedure')
 console.log('Process arguments')
 console.log(process.argv)
+console.log(__dirname)
+console.log(__pkgroot)
 
 const _args = process.argv.slice(2)
 
@@ -18,7 +20,7 @@ async function init() {
     let configPath = _args[0]
     if (!configPath) {
         console.log("Using default config")
-        resolve(__pkgroot, 'config/default.json')
+        configPath = resolve(__pkgroot, 'config/default.json')
     }
     if(!isAbsolute(configPath)) {
         configPath = resolve(process.cwd(), configPath)
