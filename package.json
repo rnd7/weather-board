@@ -12,6 +12,10 @@
     "src/shared/**"
   ],
   "sideEffects": false,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rnd7/weather-board"
+  },
   "scripts": {
     "postinstall": "node scripts/linker.js",
     "start": "node src/index.js config/default.json"
