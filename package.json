@@ -7,9 +7,9 @@
   "main": "./src/server-module.js",
   "browser": "./src/browser-module.js",
   "files": [
-    "src/server/**",
-    "src/client/**",
-    "src/shared/**"
+    "config",
+    "scripts",
+    "src/**"
   ],
   "sideEffects": false,
   "repository": {
@@ -17,7 +17,8 @@
     "url": "https://github.com/rnd7/weather-board"
   },
   "scripts": {
-    "start": "node src/index.js config/default.json"
+    "start": "node src/index.js config/default.json",
+    "postinstall": "node scripts/linker.js"
   },
   "dependencies": {
     "better-sqlite3": "^7.4.6",
