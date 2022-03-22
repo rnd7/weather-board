@@ -1,10 +1,14 @@
 import Database from 'better-sqlite3'
 import assignPrefixed from '../shared/assign-prefixed.js'
-import { resolve, isAbsolute } from 'path'
+import { dirname, resolve, isAbsolute} from 'path';
+import { fileURLToPath } from 'url';
+
+const __dirname = dirname(fileURLToPath(import.meta.url))
+const __pkgroot = resolve(__dirname, '../..')
 
 export default class WeatherBoardSqlite {
     
-    _cwd = process.cwd()
+    _cwd = __pkgroot
     _databasePath = 'data/weather-board.db'
     _db
 
