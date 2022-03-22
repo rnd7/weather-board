@@ -1,6 +1,7 @@
 import Database from 'better-sqlite3'
 import assignPrefixed from '../shared/assign-prefixed.js'
 import { dirname, resolve, isAbsolute} from 'path';
+import { existsSync, mkdirSync } from 'fs'
 import { fileURLToPath } from 'url';
 
 const __dirname = dirname(fileURLToPath(import.meta.url))
@@ -14,17 +15,23 @@ export default class WeatherBoardSqlite {
 
     constructor(config) {
         assignPrefixed(this, config)
-        this._initializeDatabase()
+        this._initialize()
         this._prepareDatabaseStatements()
     }
 
-    _initializeDatabase() {
+    _initialize() {
         let dbPath
         if(isAbsolute(this._databasePath)) {
             dbPath = this._databasePath
         } else {
             dbPath = resolve(this._cwd, this._databasePath)
         }
+
+        let dbDir = dirname(dbPath)
+        if (!existsSync(dbDir)){
+            mkdirSync(dbDir, { recursive: true });
+        }
+
         console.log(`Initialize SQLite Database at ${dbPath}`)
         this._db = new Database(dbPath, {})
         const checkTable = this._db.prepare(`SELECT name FROM sqlite_schema WHERE type='table' AND name=?;`)
@@ -66,6 +73,7 @@ export default class WeatherBoardSqlite {
             createBlacklistIPIndex.run()
         }
         console.log('Database initialized')
+
     }
 
     _prepareDatabaseStatements() {
