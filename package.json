@@ -17,7 +17,7 @@
     "url": "https://github.com/rnd7/weather-board"
   },
   "scripts": {
-    "postinstall": "node scripts/linker.js",
+    "postinstall": "node scripts/linker.mjs",
     "start": "node src/index.js config/default.json"
   },
   "dependencies": {
