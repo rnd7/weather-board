@@ -20,7 +20,7 @@ function resolveModuleFile(filepath, base) {
 export function linkModuleFile(filepath, libPath) {
 
     // ensure libPath
-    if (!existsSync(libPath)) {
+    if (!existsSync(resolve(__pkgroot, libPath))) {
         mkdirSync(resolve(__pkgroot, libPath))
     }
 
