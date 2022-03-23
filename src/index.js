@@ -10,7 +10,7 @@ const __pkgroot = resolve(__dirname, '..')
 console.log('Weather Board startup procedure')
 console.log('Process arguments')
 console.log(process.argv)
-console.log(__dirname)
+console.log('Package root')
 console.log(__pkgroot)
 
 const _args = process.argv.slice(2)
