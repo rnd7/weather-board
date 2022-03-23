@@ -1,13 +1,13 @@
 {
   "name": "@rnd7/weather-board",
-  "version": "1.2.25",
+  "version": "1.2.26",
   "license": "MIT",
   "type": "module",
   "author": "rnd7 <rnd7@riseup.net> (https://github.com/rnd7)",
   "main": "./src/server-module.js",
   "browser": "./src/browser-module.js",
   "bin": {
-    "weather-board":"./bin/weather-board.js"
+    "weather-board": "./bin/weather-board.js"
   },
   "files": [
     "config",
