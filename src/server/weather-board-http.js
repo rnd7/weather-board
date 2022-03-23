@@ -3,8 +3,12 @@ import http from 'http'
 import assignPrefixed from '../shared/assign-prefixed.js'
 import { dirname, resolve} from 'path'
 import { fileURLToPath } from 'url'
+import { linkModuleFile } from './linker.js'
 
 const __dirname = dirname(fileURLToPath(import.meta.url))
+
+linkModuleFile('socket.io/client-dist/socket.io.esm.min.js', 'src/lib')
+linkModuleFile('socket.io/client-dist/socket.io.esm.min.js.map', 'src/lib')
 
 export default class WeatherBoardHTTP {
 
