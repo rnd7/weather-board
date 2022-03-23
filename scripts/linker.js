@@ -29,7 +29,7 @@ async function link(filepath) {
         console.log(`Symlink will be created at ${from}`)
 
         // Where the symlink should point to
-        const absoluteTarget = path.resolve(__pkgroot, filepath)
+        const absoluteTarget = path.resolve(filepath)
         const relativeTarget = path.relative(
             path.dirname(from),
             absoluteTarget
