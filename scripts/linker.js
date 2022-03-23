@@ -68,7 +68,7 @@ async function link(filepath) {
 
     if (!pathExists) return
 
-    await Promise.allSettled(files.map(filepath => link(filepath)))
+    await Promise.allSettled(files.map(filepath => link(path.resolve(__pkgroot, filepath))))
     console.log("linker done")
   
 })()
