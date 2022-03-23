@@ -11,12 +11,12 @@ This is hosted on my dev server in my living room. Don't expect high availabilit
 [https://weatherboard.dynv6.net/](https://weatherboard.dynv6.net/)
 
 ## Run as command
-To tryout locally you can run the following command. Node.js has to be installed on your local machine. It installs the server and all dependencies temporarily and spawns a process using the default configuration afterwards. Data is not persisted, as long as you don't define a database path. Once you kill the process using CTRL + C everything is gone.
+To tryout locally you can run the following command. Node.js has to be installed on your local machine. It installs the server and all dependencies temporarily and spawns a process using the default configuration afterwards. Data is not guaranteed to be persisted, as long as you don't define a database path.
 
 Type this in your preferred Terminal
 
 ```
-npx @rnd7/weather-board
+npx -y weather-board
 ```
 
 And navigate to this link
@@ -32,19 +32,31 @@ Download and install as dependency using your favorite package manager.
 
 Using npm.
 ```
-npm i @rnd7/weather-board
+npm i weather-board
 ```
 Alternatively, if you installed yarn.
 ```
-yarn add @rnd7/weather-board
+yarn add weather-board
 ```
 
+### Run application
+After installation you can start the service using the following command.
 
+```
+npm exec weather-board
+```
+
+Basically the same as this command.
+```
+node node_modules/weather-board/src/index.js
+```
 
 ### Import Client
+If you decided to customize the Weather Board Client you can also import the modules to write your own app.
+
 Within some browser module you simply import the WeatherBoard WebComponent and use it like this.
 ```es6
-import { WeatherBoard } from '@rnd7/weather-board'
+import { WeatherBoard } from 'weather-board'
 document.append(WeatherBoard.create())
 ```
 
@@ -53,7 +65,7 @@ document.append(WeatherBoard.create())
 import {
     WeatherBoardServer, 
     WeatherBoardSqlite 
-} from '@rnd7/weather-board'
+} from 'weather-board'
 
 const storageAdapter = new WeatherBoardSqlite({databasePath:'path/to/the.db'})
 const server = new WeatherBoardServer(storageAdapter, {port: 3000})
