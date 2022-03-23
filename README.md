@@ -1,23 +1,76 @@
 # Weather Board
-The Weather Board is a simple, self hosted, realtime collaborative 2D textbuffer. I wanted it to look like a old school terminal where you can type and scroll in every direction.
+The Weather Board is a simple, self hosted, realtime collaborative 2D textbuffer. I wanted it to look like an old school terminal. What differs is that you can type and scroll in every direction and that the position of every character is fixed. Everything free as in beer.
 
-# The repository
+# Basic Usage
 
-It is an application, a micro framework and an attempt to find best practices developing a modern pure ES6 application without any pain. 
+It is a service, an application, a command, a micro framework and an attempt to find best practices developing a modern pure ES6 application without any pain.
+
+## Try the service
+This is hosted on my dev server in my living room. Don't expect high availability, I might turn it off from time to time. If the request times out this is probably the case.
+
+[https://weatherboard.dynv6.net/](https://weatherboard.dynv6.net/)
+
+## Run as command
+To tryout locally you can run the following command. Node.js has to be installed on your local machine. It installs the server and all dependencies temporarily and spawns a process using the default configuration afterwards. Data is not persisted, as long as you don't define a database path. Once you kill the process using CTRL + C everything is gone.
+
+Type this in your preferred Terminal
+
+```
+npx @rnd7/weather-board
+```
+
+And navigate to this link
+
+[http://localhost:3000](http://localhost:3000)
 
 
-# No bottom in sight.
+## Use as dependency
+You can use the Weather Board or parts of it in your project. 
 
-The deeper I dived, The more I've learned. My primary concern was to write a pure ES6 application that runs in any modern browser without any preprocessing, transpiling and all the time-consuming toolchain bells and whistles. I wanted to get rid of all UI libraries, really understand pointer events, find best practices regarding WebComponents, explore the possiblilites of OOP ES6 and trying to be precise. 
+### Installation
+Download and install as dependency using your favorite package manager.
 
-The server, on the other hand, is rather conservative. I was keen to use the same codebase for server and client without splitting into individual packages. Just one repo, one package. No upgrades, nor conflicting versions. Global refactoring out of the box. What you write is what you get. 
+Using npm.
+```
+npm i @rnd7/weather-board
+```
+Alternatively, if you installed yarn.
+```
+yarn add @rnd7/weather-board
+```
 
-After this experiment, it seems to me that the native APIs available provide almost everything that is necessary to develop a flexible, performant and scalable application. Most of the pain is gone. I feel in control. Of course this applies only as long as you don't care about backwards compatibility. I decided not to like private class properties and stayed with a prefixed names. I'd love to have private and protected keywords, perhaps access modifiers are a stupid idea anyways.
+
+
+### Import Client
+Within some browser module you simply import the WeatherBoard WebComponent and use it like this.
+```es6
+import { WeatherBoard } from '@rnd7/weather-board'
+document.append(WeatherBoard.create())
+```
+
+## Import Server
+```es6
+import {
+    WeatherBoardServer, 
+    WeatherBoardSqlite 
+} from '@rnd7/weather-board'
+
+const storageAdapter = new WeatherBoardSqlite({databasePath:'path/to/the.db'})
+const server = new WeatherBoardServer(storageAdapter, {port: 3000})
+```
+
+## Clone the repo
+In order to mess around with the original source code, you should consider cloning the repo.
+
+```
+git clone https://github.com/rnd7/weather-board.git
+```
+
 
 # Application
 
 ## Client
-The client consist of various pure ECMAScript Web Components build around a responsive grid layout component. I am still annoyed that everything ist beautifully encapsulating but the name has to be defined globally using the CustomElementRegistry spamming a global namespace. I tried to work around a bit. That being said, I'm enjoying the general concept and it kind of feels right. 
+The client consist of various pure ECMAScript Web Components build around a responsive grid layout component. I am still annoyed that using Web Components everything ist beautifully encapsulating but the name has to be defined globally using the CustomElementRegistry spamming a global namespace. I tried to work around a bit. That being said, I'm enjoying the general concept and it kind of feels right. 
 
 HTML templates are not used, the layout is low-complexity and templates seemednot beneficial in this case. 
 
@@ -69,15 +122,14 @@ The server uses a sqlite storage adapter. This library used is
 |---|---|---|
 |compile|src/client/weather-board-script.js|Weather Board scripting language parser and interpreter
 
+# License
 
-# Architecture
-Somehow different from most of what I coded before.
+All sources are MIT-Licensed. Feel free to use it as whole or in parts in any context.
 
-* Get rid of the toolchain. No preprocessing, no transpiling, no more waiting. Goodbye Sass, TypeScript, Webpack, Babel and all the other fellows.
-* Discard old habits. No UI Library, nothing reacts angular to vues anymore. No pointer event library. Less abstraction.
-* Loosely coupled Components, a decentralized state, no large scale design pattern just what emerges from the technology used.
-* Single source of truth. Everything served steaming hot from the src dir.
-* Make it easy for IDE to typecheck and autocomplete
-* Combine server and client modules as well as the actual application in one universal package and repository.
-* Explore the possibilities of OOP ES6.
+# No bottom in sight.
 
+The deeper I dived, The more I've learned. My primary concern was to write a pure ES6 application that runs in any modern browser without any preprocessing, transpiling and all the time-consuming toolchain bells and whistles. I wanted to get rid of all UI libraries, nothing reacts angular to vues anymore. I wanted to really understand pointer events, find best practices regarding WebComponents, explore the possiblilites of OOP ES6 and trying to be precise. Loosely coupled Components, a decentralized state. No large scale design pattern, just what emerges from the technology used.
+
+The server, on the other hand, is rather conservative. I was keen to use the same codebase for server and client without splitting into individual packages. Just one repo, one package. No upgrades, nor conflicting versions. Global refactoring out of the box. What you write is what you get, just a single source of truth. Everything served steaming hot from the src dir.
+
+After this experiment, it seems to me that the native APIs available provide almost everything that is necessary to develop a flexible, performant and scalable application. Most of the pain is gone. I feel in control. Of course this applies only as long as you don't care about backwards compatibility. I decided not to like private class properties and stayed with a prefixed names. I'd love to have private and protected keywords, perhaps access modifiers are a stupid idea anyways.
