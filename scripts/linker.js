@@ -9,26 +9,37 @@ const files = [
 
 
 async function link(filepath) {
-    console.log(`linking ${filepath}`)
-
-    // The actual symlink entity in the file system
-    const from = path.resolve(libPath, path.basename(filepath))
-    console.log(`Symlink will be created at ${from}`)
-
-    // Where the symlink should point to
-    const absoluteTarget = path.resolve(filepath)
-    const relativeTarget = path.relative(
-        path.dirname(from),
-        absoluteTarget
-    )
+    console.log(`Check for symlink ${filepath}`)
+    let fileExists = false
     try {
-        await symlink(
-            relativeTarget,   
-            from
-        )
+        fileExists = await stat(filepath)
     } catch(err) {
-        console.log(`Error creating symlink to ${relativeTarget}`)
+        if (err.code === 'ENOENT') {
+            console.log(`${filepath} does not exist`)
+        }
     }
+
+    if (!fileExists) {
+        // The actual symlink entity in the file system
+        const from = path.resolve(libPath, path.basename(filepath))
+        console.log(`Symlink will be created at ${from}`)
+
+        // Where the symlink should point to
+        const absoluteTarget = path.resolve(filepath)
+        const relativeTarget = path.relative(
+            path.dirname(from),
+            absoluteTarget
+        )
+        try { 
+            await symlink(
+                relativeTarget,   
+                from
+            )
+        } catch(err) {
+            console.log(`Error creating symlink to ${relativeTarget}`)
+        }
+    }
+   
 }
 
 (async function() {

@@ -21,8 +21,7 @@
     "url": "https://github.com/rnd7/weather-board"
   },
   "scripts": {
-    "start": "node src/index.js config/default.json",
-    "postinstall": "node scripts/linker.js"
+    "start": "node src/index.js config/default.json"
   },
   "dependencies": {
     "better-sqlite3": "^7.4.6",

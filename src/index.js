@@ -1,3 +1,5 @@
+import '../scripts/linker.js'
+
 import { readFile } from 'fs/promises'
 import WeatherBoardServer from "./server/weather-board-server.js"
 import { dirname, resolve, isAbsolute} from 'path';
