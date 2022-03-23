@@ -1,5 +1,9 @@
 import { symlink, stat, mkdir } from 'fs/promises'
 import path from 'path'
+import { fileURLToPath } from 'url'
+
+const __dirname = path.dirname(fileURLToPath(import.meta.url))
+const __pkgroot = path.resolve(__dirname, '..')
 
 const libPath = 'src/lib/'
 const files = [
@@ -21,11 +25,11 @@ async function link(filepath) {
 
     if (!fileExists) {
         // The actual symlink entity in the file system
-        const from = path.resolve(libPath, path.basename(filepath))
+        const from = path.resolve(__pkgroot, libPath, path.basename(filepath))
         console.log(`Symlink will be created at ${from}`)
 
         // Where the symlink should point to
-        const absoluteTarget = path.resolve(filepath)
+        const absoluteTarget = path.resolve(__pkgroot, filepath)
         const relativeTarget = path.relative(
             path.dirname(from),
             absoluteTarget
@@ -46,16 +50,16 @@ async function link(filepath) {
     console.log("linker started")
     let pathExists = false
     try {
-        pathExists = await stat(libPath)
+        pathExists = await stat(path.resolve(__pkgroot, libPath))
     } catch(err) {
         if (err.code === 'ENOENT') {
-            console.log(`${libPath} does not exist`)
+            console.log(`${path.resolve(__pkgroot, libPath)} does not exist`)
         }
     }
     
     if (!pathExists) {
         try {
-            await mkdir(libPath)
+            await mkdir(path.resolve(__pkgroot, libPath))
             pathExists = true
         } catch(err) {
             console.log(`Error creating ${libPath}`)
