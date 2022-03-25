@@ -1,4 +1,4 @@
-import io from '../lib/socket.io.esm.min.js'
+import io from '../module/socket.io.js'
 import APIEvent from '../shared/api-event.js'
 import APIMethod from '../shared/api-method.js'
 
