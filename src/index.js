@@ -3,6 +3,7 @@ import WeatherBoardServer from "./server/weather-board-server.js"
 import { dirname, resolve, isAbsolute} from 'path';
 import { fileURLToPath } from 'url';
 import WeatherBoardSqlite from './server/weather-board-sqlite.js';
+import { WeatherBoardHTTP } from './server-module.js';
 
 const __dirname = dirname(fileURLToPath(import.meta.url))
 const __pkgroot = resolve(__dirname, '..')
@@ -38,7 +39,9 @@ async function init() {
     console.log('')
     const storageAdapter = new WeatherBoardSqlite(config)
     console.log('')
-    const server = new WeatherBoardServer(storageAdapter, config)
+    const http = new WeatherBoardHTTP(config)
+    console.log('')
+    const server = new WeatherBoardServer(storageAdapter, http.server, config)
 }
 
 init()
