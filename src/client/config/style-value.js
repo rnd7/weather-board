@@ -33,7 +33,7 @@ export default class StyleValue {
     static errorBGColor = Color.deepRed
 
     static minInteractiveHeight = 48 // px
-    static defaultPadding = 18 // px
+    static defaultPadding = 16 // px
     static fontFamily = 'monospace'
     static defaultFontSize = 18 // px
     static smallFontSize = 12 // px
