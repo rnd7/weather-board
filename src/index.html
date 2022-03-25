@@ -19,19 +19,24 @@
 
         <style>
             html, body {
-                margin: 0;
                 overflow: hidden;
+                margin: 0;
+                height: 100%;
+                width: 100%;
+            }
+            weather-board {
+                display: flex;
+                width: 100%;
                 height: 100%;
             }
         </style>
     </head>
     <body>
         <script type="module">
-        
             import WeatherBoard from './client/weather-board.js'
-            import aboutText from './website/about-text.js'
-            import manualText from './website/manual-text.js'
-            import loginText from './website/login-text.js'
+            import aboutText from './content/about-text.js'
+            import manualText from './content/manual-text.js'
+            import loginText from './content/login-text.js'
             WeatherBoard.loginText = loginText
             WeatherBoard.aboutText = aboutText
             WeatherBoard.manualText = manualText
