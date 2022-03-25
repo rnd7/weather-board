@@ -13,13 +13,13 @@ This is hosted on my dev server in my living room. Don't expect high availabilit
 ## Run as command
 To tryout locally you can run the following command. Node.js has to be installed on your local machine. It installs the server and all dependencies temporarily and spawns a process using the default configuration afterwards. Data is not guaranteed to be persisted, as long as you don't define a database path.
 
-Type this in your preferred Terminal
+Type this in your preferred Terminal. Everything necessary will be downloaded and installed temporarily.
 
 ```
 npx -y weather-board
 ```
 
-And navigate to this link
+When the procedure is completed navigate to this link
 
 [http://localhost:3000](http://localhost:3000)
 
@@ -34,7 +34,7 @@ Using npm.
 ```
 npm i weather-board
 ```
-Alternatively, if you installed yarn.
+Alternatively, if you prefer yarn.
 ```
 yarn add weather-board
 ```
@@ -52,23 +52,60 @@ node node_modules/weather-board/src/index.js
 ```
 
 ### Import Client
-If you decided to customize the Weather Board Client you can also import the modules to write your own app.
+If you want to customize the Weather Board Client instead of just running the service you write your own app using the modules provided.
 
-Within some browser module you simply import the WeatherBoard WebComponent and use it like this.
-```es6
-import { WeatherBoard } from 'weather-board'
-document.append(WeatherBoard.create())
+As an example create an new folder, run npm init, install weather-board as dependency and finally create a file named index.html containing following code.
+
+Assuming you do not want to bundle your source code you can import the modules using relative paths instead of using the bare module name. The files are imported from the src directory using functionality provided by the included http server.
+
+```html
+<!DOCTYPE html>
+<html>
+    <body>
+        <script type="module">
+            import WeatherBoard from './client/weather-board.js'
+			console.log("Your custom index.html")
+            // Use the create helper to define and create a WebComponent
+            document.body.append(WeatherBoard.create())
+        </script>
+    </body>
+</html>
 ```
 
 ## Import Server
-```es6
+To continue the example, create a file called server.js and insert the following code.
+
+```javascript
 import {
-    WeatherBoardServer, 
-    WeatherBoardSqlite 
+    WeatherBoardSqlite,
+    WeatherBoardHTTP,
+    WeatherBoardServer
 } from 'weather-board'
 
-const storageAdapter = new WeatherBoardSqlite({databasePath:'path/to/the.db'})
-const server = new WeatherBoardServer(storageAdapter, {port: 3000})
+// Create new database relative to your project dir
+const storageAdapter = new WeatherBoardSqlite({cwd: '.', databasePath:'path/to/the.db'})
+// Configure webserver to serve your custom index.html instead of the default one.
+const http = new WeatherBoardHTTP({port: 3001, indexPath: './index.html'})
+// Start the server
+const server = new WeatherBoardServer(storageAdapter, http.server)
+```
+
+Afterwards launch your application from the commandline using
+
+```
+node server.js
+```
+
+To test it in your browser navigate to
+
+[http://localhost:3001](http://localhost:3001)
+
+## Use with bundler
+Even if this application is designed to work without a bundler like webpack or parcel you might choose to use one. In this case you might want to import the client module defined in the package.json instead of using relative path.
+
+```javascript
+import { WeatherBoard } from 'weather-board'
+document.body.append(WeatherBoard.create())
 ```
 
 ## Clone the repo
@@ -86,13 +123,15 @@ The client consist of various pure ECMAScript Web Components build around a resp
 
 HTML templates are not used, the layout is low-complexity and templates seemednot beneficial in this case. 
 
+The client is designed to be served non bundles using browser module imports.
+
 ## Server
-The server is self contained. It serves http requests, manages socket connections,
+The server setup is self contained. It serves http requests, manages socket connections,
 provides an WebSocket API and stores data in a sqlite database.
 
-No dynamic data is served as response to an http request so browserside caching works great and express should be sufficient to serve static files.
+No dynamic data is served as response to an http request so browserside caching works great and express should be sufficient to serve static files, at least for the scale I expect and the socket server is able to manage.
 
-The server uses a sqlite storage adapter. This library used is
+The server uses a sqlite storage adapter. The library used is intentional synchronous but the abstraction is asynchronous, this is for sure a performance tradeoff.
 
 # Modules
 
@@ -102,6 +141,7 @@ The server uses a sqlite storage adapter. This library used is
 | class | file | description |
 |---|---|---|
 |WeatherBoardServer|src/server/weather-board-server.js|Weather Board socket server
+|WeatherBoardHTTP|src/server/weather-board-http.js|Weather Board HTTP Server
 |WeatherBoardSqlite|src/server/weather-board-sqlite.js|SQLite Storage Adapter
 
 ## Shared Module Classes
