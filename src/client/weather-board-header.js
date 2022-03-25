@@ -25,6 +25,7 @@ export default class WeatherBoardHeader extends Component {
         .container {
             display: flex;
             flex: 1;
+            width: 100%;
             flex-direction: row;
             align-items: center;
             background-color: ${StyleValue.headerBGColor};
@@ -32,7 +33,7 @@ export default class WeatherBoardHeader extends Component {
 
         .logo {
             display: flex;
-            justify-self: center;
+            flex: 0;
             align-items: center;
             padding-left: ${StyleValue.defaultPadding}px;
             padding-right: ${StyleValue.defaultPadding}px;
@@ -40,6 +41,7 @@ export default class WeatherBoardHeader extends Component {
             ${StyleMixin.boldFontMixin}
             color: ${StyleValue.logoTextColor};
             background-color: ${StyleValue.logoBGColor};
+            white-space: nowrap;
         }
 
         .spacer {
@@ -60,6 +62,7 @@ export default class WeatherBoardHeader extends Component {
             display: none;
             cursor: pointer;
             height: 100%;
+            overflow: hidden;
         }
         .menu {
             position: absolute;
