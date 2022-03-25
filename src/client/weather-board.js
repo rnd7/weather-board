@@ -45,13 +45,15 @@ export default class WeatherBoard extends Component {
             position: relative;
             display: flex;
             flex-direction: column;
-            height: 100%;
+            overflow: hidden;
+            width: 320px;
+            height: 240px;
         }
 
         .body {
             z-index: 1;
-            display: flex;
             flex: 1;
+            display: flex;
             overflow: hidden;
             background-color: ${StyleValue.bodyBGColor};
         }
