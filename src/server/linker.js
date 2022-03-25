@@ -2,6 +2,7 @@ import { existsSync, lstatSync, mkdirSync, readlinkSync, statSync, symlinkSync }
 import { dirname, resolve, relative, basename } from 'path'
 import { fileURLToPath } from 'url'
 
+import {resolve as resolveModule} from 'import-meta-resolve'
 
 const __dirname = dirname(fileURLToPath(import.meta.url))
 const __pkgroot = resolve(__dirname, '../..')
@@ -57,4 +58,10 @@ export function linkModuleFile(filepath, libPath) {
             console.log("symlink exists")
         }
     }
+
+
+}
+
+export function getModulePath(name) {
+    return resolveModule(name, __pkgroot)
 }

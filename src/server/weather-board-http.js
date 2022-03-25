@@ -3,16 +3,24 @@ import http from 'http'
 import assignPrefixed from '../shared/assign-prefixed.js'
 import { dirname, resolve} from 'path'
 import { fileURLToPath } from 'url'
-import { linkModuleFile } from './linker.js'
+import { linkModuleFile, resolveModule } from './linker.js'
 
 const __dirname = dirname(fileURLToPath(import.meta.url))
 
 linkModuleFile('socket.io/client-dist/socket.io.esm.min.js', 'src/lib')
 linkModuleFile('socket.io/client-dist/socket.io.esm.min.js.map', 'src/lib')
 
+console.log(getModulePath("socket.io"))
+
 export default class WeatherBoardHTTP {
 
     _webroot = resolve(__dirname, '..')
+    _libPath = 'lib'
+    _sharedPath = 'shared'
+    _clientPath = 'client'
+    _filesPath = 'files'
+    _website = 'website'
+    _modules = ['socket.io']
     _port = 3000
     _app
     _server
