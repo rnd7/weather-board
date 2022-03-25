@@ -3,7 +3,6 @@ import { Server } from 'socket.io'
 import randomString from './random-string.js'
 
 import assignPrefixed from '../shared/assign-prefixed.js'
-import WeatherBoardHTTP from './weather-board-http.js'
 import sanitizeUser from './sanitize-user.js'
 import APIEvent from '../shared/api-event.js'
 import APIMethod from '../shared/api-method.js'
@@ -42,12 +41,13 @@ export default class WeatherBoardServer {
     _advanceDefaultY = 0
 
     _app
-    _http
+    _httpServer
     _io
     _db
     
-    constructor(storageAdapter, config) {
+    constructor(storageAdapter, httpServer, config) {
         if (!storageAdapter) throw new Error('Storage adapter required')
+        if (!httpServer) throw new Error('HTTP Server required')
         console.log('Weather Board Server')
         if (config) {
             console.log('Using configuration object')
@@ -58,8 +58,8 @@ export default class WeatherBoardServer {
         }
 
         this._db = storageAdapter
-        this._http = new WeatherBoardHTTP(config)
-        this._io = new Server(this._http.server)
+        this._httpServer = httpServer
+        this._io = new Server(this._httpServer)
 
         this._autoPurge()
 
@@ -213,7 +213,7 @@ export default class WeatherBoardServer {
                     ax: this._advanceDefaultX,
                     ay: this._advanceDefaultY,
                     fontsize: this._fontsizeDefault,
-                    blink: true,
+                    blink: false,
                     id,
                     token,
                     socket: socket.id,
