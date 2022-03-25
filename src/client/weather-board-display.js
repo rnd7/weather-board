@@ -10,6 +10,7 @@ export default class WeatherBoardDisplay extends Component {
         }
         .container {
             display: flex;
+            overflow: hidden;
             flex-direction: column;
             justify-content: center;
             white-space: nowrap;
@@ -19,6 +20,11 @@ export default class WeatherBoardDisplay extends Component {
             color: ${StyleValue.statusTextColor};
 
             ${StyleMixin.smallFontMixin}
+        }
+
+        .container > * {
+            text-overflow: ellipsis;
+            overflow: hidden;
         }
     `
 
