@@ -64,7 +64,6 @@ Assuming you do not want to bundle your source code you can import the modules u
     <body>
         <script type="module">
             import WeatherBoard from './client/weather-board.js'
-			console.log("Your custom index.html")
             // Use the create helper to define and create a WebComponent
             document.body.append(WeatherBoard.create())
         </script>
