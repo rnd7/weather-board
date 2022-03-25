@@ -11,9 +11,9 @@ This is hosted on my dev server in my living room. Don't expect high availabilit
 [https://weatherboard.dynv6.net/](https://weatherboard.dynv6.net/)
 
 ## Run as command
-To tryout locally you can run the following command. Node.js has to be installed on your local machine. It installs the server and all dependencies temporarily and spawns a process using the default configuration afterwards. Data is not guaranteed to be persisted, as long as you don't define a database path.
+To tryout locally you can run the following command. Node.js has to be installed on your local machine. The command installs the server and all dependencies temporarily and spawns a process using the default configuration. Data is not guaranteed to be persisted, as long as you don't define a database path.
 
-Type this in your preferred Terminal. Everything necessary will be downloaded and installed temporarily.
+Type this in your preferred Terminal.
 
 ```
 npx -y weather-board
@@ -24,11 +24,11 @@ When the procedure is completed navigate to this link
 [http://localhost:3000](http://localhost:3000)
 
 
-## Use as dependency
-You can use the Weather Board or parts of it in your project. 
+## Use as module
+You can use the Weather Board or parts of it in your project. Be sure to initialize a npm project before installing weather-board as dependency. 
 
 ### Installation
-Download and install as dependency using your favorite package manager.
+Download and install using your favorite package manager.
 
 Using npm.
 ```
@@ -100,8 +100,14 @@ To test it in your browser navigate to
 
 [http://localhost:3001](http://localhost:3001)
 
+The included WeatherBoardHTTP is based on express. It can be configured to serve files from other directories and further routes can be added.
+
+If you decide to roll you own server, you can replace the HTTP Server with your implementation and just pass a Node.js http.Server instance to the WeatherBoardServer class constructor.
+
+If you want to use another storage solution you can provide one with a matching interface. By now only sqlite is supported, a Postgre port should be quite straightforward.
+
 ## Use with bundler
-Even if this application is designed to work without a bundler like webpack or parcel you might choose to use one. In this case you might want to import the client module defined in the package.json instead of using relative path.
+Even if this application is designed to work without the use of a bundler like webpack or parcel you might choose to use one. In this case you may want to import the client module defined in the package.json instead of using relative paths.
 
 ```javascript
 import { WeatherBoard } from 'weather-board'
@@ -109,7 +115,7 @@ document.body.append(WeatherBoard.create())
 ```
 
 ## Clone the repo
-In order to mess around with the original source code, you should consider cloning the repo.
+In order to mess around with the original source code, you should consider cloning the repo. In this case changes in the original repo might lead to incompatibilites that are hard to merge. 
 
 ```
 git clone https://github.com/rnd7/weather-board.git
@@ -123,7 +129,7 @@ The client consist of various pure ECMAScript Web Components build around a resp
 
 HTML templates are not used, the layout is low-complexity and templates seemednot beneficial in this case. 
 
-The client is designed to be served non bundles using browser module imports.
+The client is designed to be served non-bundled using browser module imports.
 
 ## Server
 The server setup is self contained. It serves http requests, manages socket connections,
