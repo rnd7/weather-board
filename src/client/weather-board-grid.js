@@ -10,16 +10,19 @@ export default class WeatherBoardGrid extends Component {
             flex: 1;
             outline: none;
             border: none;
+            overflow: hidden;
         }
         .grid {
             display: grid;
+            flex: 1;
             overflow: hidden;
             background-color: ${StyleValue.bodyBGColor};
             user-select: none; 
             -webkit-user-select: none;
-            flex: 1;
+            width: 100%;
             cursor: pointer;
             opacity: 1;
+            overflow: hidden;
         }
 
         .grid.hidden {
@@ -61,7 +64,7 @@ export default class WeatherBoardGrid extends Component {
             animation-duration: ${StyleValue.blinkInterval}s;
             animation-timing-function: ${StyleValue.blinkFunction};
             animation-iteration-count: infinite;
-            animation-direction: alternate;*/
+            animation-direction: alternate;
 
 
         }
@@ -113,6 +116,7 @@ export default class WeatherBoardGrid extends Component {
             for (let entry of entries) {
                 this._elementWidth = entry.contentRect.width
                 this._elementHeight = entry.contentRect.height
+                console.log("height", this._elementHeight)
                 this._gridEl.classList.remove("animate")
                 this._gridEl.classList.add("hidden")
                 this.debounced(this._resize, 300)()
