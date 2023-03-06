@@ -5,11 +5,6 @@ The Weather Board is a simple, self hosted, realtime collaborative 2D textbuffer
 
 It is a service, an application, a command, a micro framework and an attempt to find best practices developing a modern pure ES6 application without any pain.
 
-## Try the service
-This is hosted on my dev server in my living room. Don't expect high availability, I might turn it off from time to time. If the request times out this is probably the case.
-
-[https://weatherboard.dynv6.net/](https://weatherboard.dynv6.net/)
-
 ## Run as command
 To tryout locally you can run the following command. Node.js has to be installed on your local machine. The command installs the server and all dependencies temporarily and spawns a process using the default configuration. Data is not guaranteed to be persisted, as long as you don't define a database path.
 
